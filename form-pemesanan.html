@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="form-style.css">
+    <title>Mayank Offsets & Dry Fruits</title>
+
+    <script type="text/javascript">
+        window.onload = function(){
+            var paymentway = document.getElementById('paymentway');
+            var check-ambil = paymentway.getElementsByTagName('INPUT');
+            for (var i=0; i< check-ambil.length; i++){
+                check-ambil[i].onclick=function(){
+                    for (var i=0; i< check-ambil.length; i++){
+                if( check-ambil[i] !=this&& this.checked){
+                    check-ambil[i].checked = false;
+                }
+            }
+        };
+    }
+};
+
+    </script>
+</head>
+<body>
+    <div class="main-container">
+        <header>
+            <h1 class="title-startup"> Mayank Offsets</h1></a>
+            <nav class="navbar-menu">
+                <a href="index.html"><img src="assets/home-white.png"></a>
+                <a href="form-pemesanan.html"><img src="assets/pesan-white.png"></a>
+                <a href="profile-page.html"><img src="assets/profile-white.png"></a>
+            </nav>
+        </header>
+
+        <main>
+            <h2>Online Order</h2>
+            <form class="pesanan-form">
+                <div class="data-diri">
+                    <p>Name :</p> 
+                    <input type="text" name="nama" id="input-nama">
+                    <p>Address :</p> 
+                    <input type="text" name="nama" id="input-nama">
+                    <p>Message (<i>with your details</i>) :</p>
+                    <textarea name="alamat" id="input-alamat" cols="30" rows="10"></textarea>
+                    <p>Quantity :</p>
+                    <input type="number" name="hp" id="input-hp">
+                    <p>Email :</p>
+                    <input type="email" name="email" id="input-email">
+                    <p>Upload File :</p>
+                    <input type="file">
+                </div>
+
+                <div class="choose-media">
+                    <p>Your Requirement :</p>
+                    <input type="checkbox" id="check-kertas"> <span>Bill Printing</span> <br>
+                    <input type="checkbox" id="check-baliho"> <span>Challan</span> <br>
+                    <input type="checkbox" id="check-poster"> <span>Poster</span> <br>
+                    <input type="checkbox" id="check-mug"> <span>Visiting Envelop</span> <br>
+                    <input type="checkbox" id="check-kipas"> <span>Flex Banner</span>
+                    <input type="checkbox" id="check-mug"> <span>Digital Printing</span> <br>
+                    <input type="checkbox" id="check-kipas"> <span>Flyers</span>
+
+                </div>
+
+                <div class="choose-pengambilan" id="paymentway">
+                    <p>Payments :</p>
+                    <input type="checkbox" id="check-ambil" > <span>UPI</span> <br>
+                    <input type="checkbox" id="check-ambil"> <span>Net Banking</span> <br>
+                    <input type="checkbox" id="check-ambil"> <span>Cash on Delivery</span>
+                </div><br>
+
+                <div class="submit-section" >
+                    <!--<p>Jumlah :</p>
+                    <input type="number" name="jumlah" id="input-jumlah">-->
+                    <button>Submit</button>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <p>@Copyright 2022 Mayank Offsets & Dry Fruits | Design by <a href="tel:+91 8724009858" style="color: white;"> Abhijeet Singh</a></p>
+        </footer>
+    </div>
+</body>
+</html>
